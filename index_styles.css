@@ -1,0 +1,259 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117; /* GitHub-like dark background */
+    color: #c9d1d9; /* GitHub-like text color */
+    line-height: 1.6;
+    overflow-x: hidden; /* Disable horizontal scroll on body */
+}
+
+h2 {
+    color: #58a6ff; /* Blue heading color */
+}
+
+.highlight_name {
+    color: rgb(196, 37, 37);
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #161b22; /* Dark nav bar */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: #58a6ff; /* Blue links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: #34d058; /* Green hover color */
+}
+
+/* Pop-Up Animation for Profile Photo and Text */
+.fade-in {
+    animation: fadeIn 1.0s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enlarge Effect on Hover */
+.profile-photo img:hover,
+.intro-text:hover {
+    transform: scale(1.09); /* Enlarge slightly */
+    transition: transform 0.4s ease; /* Smooth enlarge effect */
+}
+
+/* Section Styles */
+.horizontal-sections-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* Smooth horizontal scrolling */
+    height: 100vh; /* Full height for each section */
+}
+
+section {
+    min-width: 100vw; /* Each section takes full viewport width */
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Introduction Section */
+#intro-text .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 40px; /*  space between image and text */
+}
+
+.intro-text {
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+}
+
+.web-exp {
+    color: #58a6ff; /* Blue color for web-exp */
+    font-weight: bold;
+}
+
+/* Eductaion Section */
+.education-title {
+    color: #58a6ff; /* Blue color for web-exp */
+    font-weight: bold;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 1.2rem;
+    color: #c9d1d9;
+}
+
+/* Projects Section */
+#projects {
+    padding: 100px 50px; /*  padding to keep text from hitting edges */
+}
+
+#projects p a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#projects p a:hover {
+    color: #34d058;
+    text-decoration: underline;
+}
+
+
+/* Experience Section Styling */
+#experience h2 {
+    color: #58a6ff; /* Blue theme for section title */
+}
+
+.job-title {
+    color: #58a6ff; /* Blue color for job title */
+    font-weight: bold;
+}
+
+.organization {
+    color: #c9d1d9; /* Lighter text color for organization name */
+}
+
+#experience ul {
+    list-style: disc;
+    margin-top: auto;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#experience ul li {
+    margin-bottom: 10px;
+    color: #c9d1d9;
+}
+
+#experience p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Contact Section Styling */
+#contact h2 {
+    color: #58a6ff; /* Blue theme for the Contact heading */
+    text-align: center;
+}
+
+#contact p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    width: 20px;  /* size of the icon */
+    height: 20px;  /* size of the icon */
+    margin-right: 10px;
+    vertical-align: middle;  /* Align the icon vertically with the text */
+}
+
+/* Links styling */
+#contact a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #34d058; /*  color on hover */
+    text-decoration: underline;
+}
+
+
+/* Responsive design adjustments for mobile */
+@media screen and (max-width: 760px) {
+    #experience p {
+        font-size: 1rem;
+    }
+
+    #experience ul li {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Smooth Horizontal Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Other Sections */
+#skills, #education, #projects, #experience, #contact {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 760px) {
+    .profile-photo img {
+        max-width: 200px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
